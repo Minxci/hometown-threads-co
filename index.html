@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hometown Threads Co.</title>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="site-header">
+        <a href="#" id="logo" class="logo">Hometown Threads Co.</a>
+        <form id="searchForm" class="search-form">
+            <input type="text" id="searchInput" placeholder="Search shirts, hoodies, hats..." />
+            <button type="submit" id="searchButton">Go</button>
+        </form>
+    </header>
+
+    <main>
+        <!-- Story 1: Home / Browse -->
+        <section id="homeView">
+            <div class="hero">
+                <h1>Custom gear for your team, town, and family</h1>
+                <p>Ready-made designs and group orders, printed locally.</p>
+            </div>
+
+            <h2>Shop by Category</h2>
+            <div id="categoryButtons" class="category-buttons"></div>
+
+            <h2 id="gridTitle">Featured Products</h2>
+            <div id="productGrid" class="product-grid"></div>
+        </section>
+
+        <!-- Story 2: Search Results -->
+        <section id="searchView" class="hidden">
+            <p id="resultCount" class="result-count"></p>
+            <div class="controls">
+                <label>Category
+                    <select id="filterCategory"></select>
+                </label>
+                <label>Sort
+                    <select id="sortPrice">
+                        <option value="none">Relevance</option>
+                        <option value="low">Price: Low to High</option>
+                        <option value="high">Price: High to Low</option>
+                    </select>
+                </label>
+            </div>
+            <div id="searchGrid" class="product-grid"></div>
+            <div id="noResults" class="no-results hidden">
+                <p>No results found. Try a different word or browse a category:</p>
+                <div id="noResultsCategories" class="category-buttons"></div>
+            </div>
+        </section>
+
+        <!-- Story 1: Product Detail -->
+        <section id="detailView" class="hidden">
+            <button type="button" id="backButton" class="back-button">&larr; Back</button>
+            <div id="productDetail" class="detail"></div>
+        </section>
+
+        <p id="loadError" class="error hidden"></p>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
